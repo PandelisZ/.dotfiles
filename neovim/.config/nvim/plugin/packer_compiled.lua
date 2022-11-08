@@ -95,6 +95,11 @@ _G.packer_plugins = {
     path = "/Users/pz/.local/share/nvim/site/pack/packer/start/nvim-surround",
     url = "https://github.com/kylechui/nvim-surround"
   },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/Users/pz/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/pz/.local/share/nvim/site/pack/packer/start/packer.nvim",
