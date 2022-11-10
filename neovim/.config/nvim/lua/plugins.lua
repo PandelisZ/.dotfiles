@@ -5,10 +5,13 @@ return require('packer').startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
+  use { 'neoclide/coc.nvim', branch = 'release' }
   use { "catppuccin/nvim", as = "catppuccin" }
   use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
   use { 'neovim/nvim-lspconfig' } -- Configurations for Nvim LSP
-  use { 'nvim-telescope/telescope.nvim', tag = '0.1.0' }	
+  use { 'jose-elias-alvarez/null-ls.nvim' }
+  use { 'MunifTanjim/eslint.nvim' }
+  use { 'nvim-telescope/telescope.nvim', tag = '0.1.0' }
   use({
     "kylechui/nvim-surround",
     tag = "*", -- Use for stability; omit to use `main` branch for the latest features

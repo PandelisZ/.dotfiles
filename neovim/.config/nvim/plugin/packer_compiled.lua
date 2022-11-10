@@ -79,10 +79,25 @@ _G.packer_plugins = {
     path = "/Users/pz/.local/share/nvim/site/pack/packer/start/catppuccin",
     url = "https://github.com/catppuccin/nvim"
   },
+  ["coc.nvim"] = {
+    loaded = true,
+    path = "/Users/pz/.local/share/nvim/site/pack/packer/start/coc.nvim",
+    url = "https://github.com/neoclide/coc.nvim"
+  },
+  ["eslint.nvim"] = {
+    loaded = true,
+    path = "/Users/pz/.local/share/nvim/site/pack/packer/start/eslint.nvim",
+    url = "https://github.com/MunifTanjim/eslint.nvim"
+  },
   neogit = {
     loaded = true,
     path = "/Users/pz/.local/share/nvim/site/pack/packer/start/neogit",
     url = "https://github.com/TimUntersberger/neogit"
+  },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/Users/pz/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
