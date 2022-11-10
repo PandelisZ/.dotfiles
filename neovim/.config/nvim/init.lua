@@ -1,5 +1,6 @@
 require('plugins')
 require('coc')
+require('tree')
 
 local lsp = require('lspconfig')
 local null_ls = require("null-ls")
@@ -116,7 +117,7 @@ vim.opt.wrap = false
 
 
 -- Functional wrapper for mapping custom keybindings
-function map(mode, lhs, rhs, opts)
+local function map(mode, lhs, rhs, opts)
   local options = { noremap = true }
   if opts then
     options = vim.tbl_extend("force", options, opts)
@@ -128,7 +129,8 @@ end
 
 
 
-map("n", "<Leader>ff", ":Telescope find_files<CR>")
+map("n", "<Leader>ff", ":Telescope git_files<CR>")
+map("n", "<Leader>fd", ":Telescope find_files<CR>")
 map("n", "<Leader>fb", ":Telescope buffers<CR>")
 
 -- quicksave
@@ -138,3 +140,10 @@ map("n", "<Leader>pe", ":Ntree<CR>")
 -- git
 map("n", "<Leader>gs", ":Neogit<CR>")
 map("n", "<Leader>gc", ":Neogit commit<CR>")
+
+--tree
+map("n", "<Leader>tt", ":NvimTreeToggle<CR>")
+map("n", "<Leader>ttf", ":NvimTreeFocus<CR>")
+map("n", "<Leader>tff", ":NvimTreeFindFile<CR>")
+
+
