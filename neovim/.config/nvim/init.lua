@@ -39,6 +39,47 @@ eslint.setup({
   },
 })
 
+require('lualine').setup {
+  options = {
+    icons_enabled = true,
+    theme = 'auto',
+    component_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
+    disabled_filetypes = {
+      statusline = {},
+      winbar = {},
+    },
+    ignore_focus = {},
+    always_divide_middle = true,
+    globalstatus = false,
+    refresh = {
+      statusline = 1000,
+      tabline = 1000,
+      winbar = 1000,
+    }
+  },
+  sections = {
+    lualine_a = {'mode'},
+    lualine_b = {'branch', 'diff', 'diagnostics'},
+    lualine_c = {'filename'},
+    lualine_x = {'encoding', 'fileformat', 'filetype'},
+    lualine_y = {'progress'},
+    lualine_z = {'location'}
+  },
+  inactive_sections = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {'filename'},
+    lualine_x = {'location'},
+    lualine_y = {},
+    lualine_z = {}
+  },
+  tabline = {},
+  winbar = {},
+  inactive_winbar = {},
+  extensions = {}
+}
+
 local neogit = require('neogit')
 
 neogit.setup {}
@@ -57,9 +98,10 @@ require('telescope').setup{
   defaults = { file_ignore_patterns = {"node_modules"} }
 }
 
+
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
-  ensure_installed = { "typescript", "lua", "ruby" },
+  ensure_installed = { "typescript", "lua", "ruby", "javascript" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
@@ -100,7 +142,7 @@ require'nvim-treesitter.configs'.setup {
 vim.o.number = true
 vim.o.relativenumber = true
 vim.g.mapleader = ' '
-vim.cmd("colorscheme catppuccin")
+vim.cmd("colorscheme catppuccin-macchiato")
 
 vim.opt.guicursor =  ''
 
@@ -145,5 +187,4 @@ map("n", "<Leader>gc", ":Neogit commit<CR>")
 map("n", "<Leader>tt", ":NvimTreeToggle<CR>")
 map("n", "<Leader>ttf", ":NvimTreeFocus<CR>")
 map("n", "<Leader>tff", ":NvimTreeFindFile<CR>")
-
 

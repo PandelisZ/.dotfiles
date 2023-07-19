@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/Users/pz/.local/share/nvim/site/pack/packer/start/eslint.nvim",
     url = "https://github.com/MunifTanjim/eslint.nvim"
   },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/Users/pz/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
   neogit = {
     loaded = true,
     path = "/Users/pz/.local/share/nvim/site/pack/packer/start/neogit",

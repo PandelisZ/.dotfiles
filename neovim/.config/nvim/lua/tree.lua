@@ -5,12 +5,19 @@ vim.g.loaded_netrwPlugin = 1
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
+-- fix a perfomance issue with fish
+vim.shell = '/bin/bash'
+
 -- empty setup using defaults
 require("nvim-tree").setup()
 
 -- OR setup with some options
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
+  git = {
+    enable = true,
+    timeout = 400,
+  },
   view = {
     adaptive_size = true,
     mappings = {
@@ -18,6 +25,7 @@ require("nvim-tree").setup({
         { key = "u", action = "dir_up" },
       },
     },
+    side = "right",
   },
   renderer = {
     group_empty = true,
